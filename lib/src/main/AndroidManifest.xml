@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yidont.lib">
+
+    <application>
+        <provider
+            android:name=".provider.ApplicationContentProvider"
+            android:authorities="${applicationId}.contentprovider"
+            android:exported="false" />
+    </application>
+
+</manifest>

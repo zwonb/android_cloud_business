@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/code_des"
+        style="@style/text14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:text="我们已向您的手机号码发送了一条短信验证码，请注意查收！"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/code_et"
+        style="@style/text16"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:hint="请输入验证码"
+        android:inputType="number"
+        android:maxLength="6"
+        app:layout_constraintEnd_toStartOf="@+id/code_again"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_des" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/code_clean"-->
+    <!--        android:layout_width="48dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:padding="12dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/code_et"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/code_again"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/code_et"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/code_et"-->
+    <!--        app:srcCompat="@drawable/ic_clean" />-->
+
+    <Button
+        android:id="@+id/code_again"
+        style="@style/text14"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/theme_round_selector"
+        android:gravity="center"
+        android:minWidth="110dp"
+        android:text="获取验证码"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/code_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/code_et" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/line_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_et" />
+
+    <Button
+        android:id="@+id/code_execute"
+        style="@style/text16"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/theme_round_selector"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

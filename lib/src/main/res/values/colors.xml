@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_logo_background">#00B6FB</color>
+
+    <color name="colorPrimary">#3398ff</color>
+    <color name="colorPrimaryDark">#3398ff</color>
+    <color name="colorAccent">#3398ff</color>
+    <color name="theme">#3398ff</color>
+    <color name="theme_select">#3a80c1</color>
+    <color name="head_bar_bg">#3398ff</color>
+
+    <color name="text303030">#303030</color>
+    <color name="text333">#333333</color>
+    <color name="text666">#666666</color>
+    <color name="text999">#999999</color>
+    <color name="text_A9">#A9A9A9</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="line_ccc">#CCCCCC</color>
+    <color name="line_f0">#F0F0F0</color>
+</resources>

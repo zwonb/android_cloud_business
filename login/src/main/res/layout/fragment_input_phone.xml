@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/phone_des"
+        style="@style/text14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="仅支持国内 (+86) 用户"
+        android:textColor="@color/theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/phone_img"
+        style="@style/text14"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_des" />
+
+    <View
+        android:id="@+id/phone_view"
+        style="@style/line_vertical"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_img"
+        app:layout_constraintStart_toEndOf="@+id/phone_img"
+        app:layout_constraintTop_toTopOf="@+id/phone_img" />
+
+    <EditText
+        android:id="@+id/phone_et"
+        style="@style/text16"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@null"
+        android:hint="请输入11位有效手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_view"
+        app:layout_constraintTop_toTopOf="@+id/phone_view" />
+
+    <View
+        android:id="@+id/phone_view1"
+        style="@style/line_horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_img" />
+
+    <Button
+        android:id="@+id/phone_execute"
+        style="@style/text16"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/theme_round_selector"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_view1" />
+
+    <!--    <CheckBox-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        android:id="@+id/phone_checkbox"-->
+    <!--        style="@style/text14"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:text="我已阅读并同意"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/phone_execute" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/phone_accept"-->
+    <!--        style="@style/text14"-->
+    <!--        android:gravity="center"-->
+    <!--        android:minHeight="32dp"-->
+    <!--        android:text="《使用合同和隐私政策》"-->
+    <!--        android:textColor="@color/theme"-->
+    <!--        app:layout_constraintBaseline_toBaselineOf="@+id/phone_checkbox"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/phone_checkbox" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

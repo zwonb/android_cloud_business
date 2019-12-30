@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yidont.login">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".ui.LoginUIA" />
+        <activity android:name=".ui.register.RegisterPhoneUIA" />
+        <activity android:name=".ui.register.RegisterCodeUIA" />
+        <activity android:name=".ui.register.RegisterPwdUIA" />
+        <activity android:name=".ui.forget.ForgetPhoneUIA" />
+        <activity android:name=".ui.forget.ForgetCodeUIA" />
+        <activity android:name=".ui.forget.ForgetPwdUIA" />
+    </application>
+</manifest>

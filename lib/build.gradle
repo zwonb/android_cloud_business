@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.file('module_config.gradle')
+apply from: file('field.gradle')
+android {
+
+    defaultConfig {
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api "com.github.bumptech.glide:glide:$glide"
+    api "com.github.zwonb:head-bar-ktx:$headBar"
+    api "com.drakeet.multitype:multitype:$multitype"
+    api "com.yanzhenjie.recyclerview:x:$refresh"
+    api "com.youth.banner:banner:$banner"
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0'
+}

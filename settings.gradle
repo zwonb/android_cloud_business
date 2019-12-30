@@ -1,0 +1,5 @@
+rootProject.name='android_cloud_business'
+include ':app', ':login', ':lib', ':http'
+include ':member'
+include ':service'
+include ':store'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.youth.banner.Banner
+        android:id="@+id/item_banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:image_scale_type="center_crop"
+        app:layout_constraintDimensionRatio="19:6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@mipmap/pic_banner_placeholder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

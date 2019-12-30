@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+apply from: rootProject.file('module_config.gradle')
+apply from: file('realease.gradle')
+
+android {
+    defaultConfig {
+        applicationId "com.yidont.cloud.business"
+    }
+
+    signingConfigs {
+        config {
+            try {
+                keyAlias ALIAS_NAME
+                keyPassword ALIAS_PASS
+                storeFile file(KEY_PATH)
+                storePassword KEY_PASS
+            } catch (e) {
+                println e.message
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+
+            //打包生成包名字
+            android.applicationVariants.all { variant ->
+                def buildType = variant.buildType.name
+//                def channel = variant.productFlavors[0].name
+                variant.outputs.each {
+                    if (buildType == "release") {
+                        def fileName = "企讯云商家版_v${defaultConfig.versionName}_${defaultConfig.versionCode}" + ".apk"
+                        it.outputFileName = fileName
+//                        variant.getPackageApplicationProvider().get().outputDirectory= new File('/Users/zwonb/Documents/Android/apk')
+                    }
+                }
+            }
+
+            signingConfig signingConfigs.config
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            versionNameSuffix "-debug"
+        }
+    }
+}
+
+dependencies {
+    implementation project(':member')
+    implementation project(':service')
+    implementation project(':store')
+}
